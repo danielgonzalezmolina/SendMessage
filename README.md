@@ -5,6 +5,41 @@ Este proyecto tiene como objetivo poner en práctica la configuración del entor
 
 ---
 
+
+## ViewBinding
+ViewBinding es una característica de Android que simplifica la interacción con las vistas en tu aplicación.
+Diferencia con findViewById:
+* findViewById busca la vista en tiempo de ejecución usando el id, lo que puede provocar errores si la vista no existe o se cambia el layout.
+* ViewBinding proporciona referencias seguras en tiempo de compilación, evitando errores de tipo NullPointerException y haciendo el código más limpio.
+En el archivo build.gradle se inicia así:
+* ``
+  android {
+    ...
+    buildFeatures {
+        viewBinding true
+    }
+}
+``
+Por cada archivo layout_name.xml, Android genera una clase llamada **LayoutNameBinding** y contiene propiedades para cada vista con id en ese layout.
+
+### Ventajas e inconvenientes respecto a findViewById
+
+ * Ventajas:
+
+ - Menos código repetitivo y más legible.
+
+ - Seguridad en tiempo de compilación (no necesitas casts).
+
+ - Evita errores de tipo NullPointerException al acceder a vistas inexistentes.
+
+ - Mejor rendimiento al no buscar vistas en tiempo de ejecución.
+
+ * Inconvenientes:
+
+ - Genera una clase adicional por layout (pero esto no suele afectar mucho al rendimiento).
+
+ - No tiene capacidades de binding de datos como DataBinding (solo referencias a vistas).
+
 ## 🚀 Funcionalidades
 
 * Pantalla principal con un campo de texto para escribir un mensaje.
