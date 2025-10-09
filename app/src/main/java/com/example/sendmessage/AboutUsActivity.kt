@@ -13,17 +13,21 @@ class AboutUsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(AboutPage(this)
             .setBackground(android.R.color.white)
+            .setDescription("SendMessage es una aplicación sencilla que te permite enviar mensajes de forma rápida y directa.\n" +
+                    "Diseñada para practicar el intercambio de información entre pantallas, muestra cómo crear, enviar y visualizar mensajes dentro de una interfaz limpia y fácil de usar.\n" +
+                    "\n" +
+                    "Ideal para aprender los fundamentos de Android: intents, bundles y comunicación entre actividades.")
             .setImage(R.mipmap.ic_launcher)
-            .addItem(Item("AboutPage Version 1.0"))
-            .addEmail("husaynhakeem@gmail.com")
-            .addFacebook("linkinpark")
-            .addGithub("husaynhakeem")
-            .addInstagram("husaynhakeem")
-            .addPlayStore("com.maketrumptweetseightagain")
-            .addTwitter("oneplus")
-            .addWebsite("http://www.google.com")
+            .addItem(Item("Version 0.1.0"))
+            .addEmail("test@gmail.com")
+            .addFacebook("test")
+            .addGithub("danielgonzalezmolina")
+            .addInstagram("test")
+            .addPlayStore("com.test")
+            .addTwitter("test")
+            .addWebsite("http://www.test.com")
             .addYoutube("UCyWqModMQlbIo8274Wh_ZsQ")
-            .addItem(Item("Thank you for downloading", null, View.OnClickListener { Toast.makeText(this, "Enjoy!", Toast.LENGTH_SHORT).show() }))
+            .addItem(Item("DANIEL GONZÁLEZ MOLINA", null, View.OnClickListener { Toast.makeText(this, "Enjoy!", Toast.LENGTH_SHORT).show() }))
             .create())
     }
 }
