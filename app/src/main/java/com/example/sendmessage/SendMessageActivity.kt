@@ -2,6 +2,7 @@ package com.example.sendmessage
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,11 +11,12 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.sendmessage.model.Message
 import com.example.sendmessage.model.Persona
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.example.sendmessage.ViewActivity
 import kotlin.jvm.java
 
 class SendMessageActivity : AppCompatActivity() {
     private val fab: FloatingActionButton by lazy { findViewById(R.id.fab) }
+
+
     private val edMessage : EditText by lazy { findViewById(R.id.edMessage) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +32,19 @@ class SendMessageActivity : AppCompatActivity() {
         {
             sendMessage()
         }
+
+        val aboutUsButton = findViewById<Button>(R.id.about_us)
+
+        aboutUsButton.setOnClickListener {
+            val intent = Intent(this, AboutUsActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
+
+
+
 
 private fun sendMessage(){
     //1. Crear los objetos message, sender y recceiver

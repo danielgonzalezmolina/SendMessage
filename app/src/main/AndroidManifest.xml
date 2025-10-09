@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SendMessage">
         <activity
-            android:name=".AboutAsActivity"
+            android:name=".AboutUsActivity"
             android:exported="false" />
         <activity
             android:name=".ViewActivity"
