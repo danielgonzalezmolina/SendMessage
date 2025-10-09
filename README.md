@@ -24,7 +24,7 @@ Por cada archivo layout_name.xml, Android genera una clase llamada **LayoutNameB
 
 ### Ventajas e inconvenientes respecto a findViewById
 
- * Ventajas:
+Ventajas:
 
  - Menos código repetitivo y más legible.
 
@@ -34,7 +34,7 @@ Por cada archivo layout_name.xml, Android genera una clase llamada **LayoutNameB
 
  - Mejor rendimiento al no buscar vistas en tiempo de ejecución.
 
- * Inconvenientes:
+Inconvenientes:
 
  - Genera una clase adicional por layout (pero esto no suele afectar mucho al rendimiento).
 

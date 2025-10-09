@@ -7,6 +7,10 @@ android {
     namespace = "com.example.sendmessage"
     compileSdk = 36
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.sendmessage"
         minSdk = 24
@@ -33,6 +37,8 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+
 }
 
 dependencies {
