@@ -1,5 +1,7 @@
 package com.example.sendmessage.model
 
+import java.io.Serializable
+
 /**
  * Persona
  *
@@ -8,4 +10,4 @@ package com.example.sendmessage.model
  * @property dni
  */
 
-data class Persona(val name: String, val surname: String, val dni: String)
+data class Persona(val name: String, val surname: String, val dni: String) : Serializable

@@ -13,6 +13,7 @@ import com.example.sendmessage.model.Persona
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlin.jvm.java
 
+
 class SendMessageActivity : AppCompatActivity() {
     private val fab: FloatingActionButton by lazy { findViewById(R.id.fab) }
 
